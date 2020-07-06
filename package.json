@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon server.js",
     "start": "npm-run-all --parallel dev watch:sass",
-    "watch:sass": "node-sass public/sass/main.scss public/css/style.css -w"
+    "watch:sass": "node-sass public/sass/main.scss public/css/style.css -w",
+    "prod": "NODE_ENV=production node server.js"
   },
   "author": "Kyu Villasin",
   "license": "ISC",
