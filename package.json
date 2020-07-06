@@ -8,7 +8,7 @@
     "dev": "nodemon server.js",
     "start": "npm-run-all --parallel dev watch:sass",
     "watch:sass": "node-sass public/sass/main.scss public/css/style.css -w",
-    "prod": "NODE_ENV=production node server.js"
+    "prod": "node server.js"
   },
   "author": "Kyu Villasin",
   "license": "ISC",
