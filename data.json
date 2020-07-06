@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "name" : "FAake title",
+        "description": "Unsere Suppe mit einer schönen ausgewogenen Säure des Balsamicoessigs, ergibt eine proteinreiche und sättigende Mahlzeit.",
+        "price": 7,
+        "macros" : {
+
+        },
+        "info" : {
+            "title": "Graupen",
+            "img": "img/veggie.png",
+            "text": "Unsere Suppe mit einer schönen ausgewogenen Säure des Balsamicoessigs, ergibt eine proteinreiche und sättigende Mahlzeit."
+        },
+        "extras" : [
+            {
+                "name": "Käse",
+                "price": 1
+            },
+            {
+                "name": "Chilli Floken",
+                "price": 1
+            },
+            {
+                "name": "Reis",
+                "price": 1
+            }
+        ]
+    }
+]

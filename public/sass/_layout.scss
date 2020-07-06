@@ -1,0 +1,264 @@
+.container {
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+    
+    background-image: linear-gradient(to right bottom, var(--color-beige-light), var(--color-beige-dark));
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    min-height: 100vh;
+    width: 80%;
+    margin: 0 10rem;
+}
+.cover {
+    display: flex;
+    height: auto;
+    
+    width: 100%;
+    height: 60vh;
+}
+.cover-photo {
+    background-image: url('../img/cover.JPG');
+    width: 100%;
+    // margin: 0 10rem;
+    height: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.nav {
+    
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    height: 5rem;
+    background-color: #fff;
+    border-bottom: var(--line);
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+   
+
+    &-links {
+        margin: 2rem;
+        text-decoration: none;
+        transition: all .2s;
+        &:hover {
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: 0 1rem 2rem rgba(var(--color-grey-dark-1),.2);
+            color: var(--color-orange);
+            &::after {
+                transform: scaleX(1.4) scaleY(1.6);
+                opacity: 0;
+            }
+        }
+        
+    }
+}
+
+.content {
+    min-height: 100vh;    
+    max-width: 80rem;
+    margin: 8rem auto;
+    // display: flex;
+}
+
+.card {
+    width: 100%;
+    min-height: 40rem ;
+    // background-color: white;
+    transition: all .2s;
+    display: flex;
+    flex-direction: column;
+
+    &-row-1 {
+        min-height: 20rem;
+        width: 100%;
+        display: flex;
+        align-items: stretch;
+        align-content: stretch;
+        padding: 1rem;
+
+        
+        @media only screen and (max-width: $bp-medium) {
+            
+            flex-direction: column;
+        }
+
+        &--img {
+            height: auto;
+            width: 51rem;
+            background-image: url('../img/Beluga\ Linsen.png');
+            background-size: cover;
+            background-position: top;
+            border-radius: 5px;
+            @media only screen and (max-width: $bp-medium) {
+            
+                height: 35rem;
+                width: 100%;
+            }
+        }
+
+        &--text {
+            margin: 0 2rem;
+
+            & > h2 {
+                text-transform: uppercase;
+                font-family: TypeWriter;
+                letter-spacing: 2px;
+                
+            }
+
+            & > p {
+                color: grey;
+                font-size: 1.5rem;
+                line-height: 1.5;
+                letter-spacing: 1.1px;
+                font-weight: 300;
+            }
+
+        }
+
+        &--button {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            width: 23%;
+            @media only screen and (max-width: $bp-medium) {
+                width: 100%;
+                flex-direction: row;
+                justify-content:  space-between;
+            }
+            & > .price {
+                background-color: var(--color-blue);
+                color: white;
+                font-size: 2rem;
+                border-radius: 5px;
+                width: 12rem;
+                text-align: center;
+            }
+            & > button {
+                background-color: var(--color-green);
+                color: white;
+                width: 7rem;
+                height: 3rem;
+                border: 0;
+                border-radius: 3px;
+                font-size: 2rem;
+                margin: 2rem 0;
+                cursor: pointer;
+                transition: all .2s;
+                
+                &:hover {
+                    transform: translateY(-3px) scale(1.1);
+                    box-shadow: 0 1rem 2rem rgba(var(--color-grey-dark-1),.2);
+                    background-color: var(--color-green-light);
+                    &::after {
+                        transform: scaleX(1.4) scaleY(1.6);
+                        opacity: 0;
+                    }
+                }
+                
+            }
+        }
+    }
+
+    &-row-2 {
+        
+        flex-grow: 1;
+        width: 100%;
+        // background-color: lightblue;
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        padding: 1rem;
+
+        & > .macros, .info, .extras {
+            background-color: white;
+            border-radius: 5px;
+            margin: 2rem 0;
+
+        }
+        & > .macros  {
+            background-color: var(--color-orange-fade);
+            width: 30%;
+            color: white;
+            font-family: TypeWriter;
+            & > table {
+                width: -webkit-fill-available;
+                margin: 2rem;
+                font-size: 1.5rem;
+
+                & > th {
+                    text-align: right;
+                }
+                
+                
+            }
+
+            
+
+        }
+
+        .info {
+            background-color: white;
+            width: 40%;
+
+            h2 {
+                text-align: center;
+                margin-top: 2rem;
+            }
+            
+            &-content {
+                display: flex;
+                &-img {
+
+                    height: auto;
+                    width: 10rem;
+                }
+                &-text {
+                    width: -webkit-fill-available;
+                    padding: 2rem;
+                }
+            }
+            
+        }
+
+        & > .extras {
+            background-color: white;
+            width: 25%;
+            font-family: TypeWriter;
+            display: flex;
+            font-size: 1.5rem;
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem;
+
+            &-checkbox {
+                color: green;
+
+                &:checked {
+                    color: red
+                }
+            }
+            
+            &> input[type="checkbox"] {
+                color: green;
+                :checked {
+                    color: red
+                }
+            }
+        }
+    }
+    
+}
+
+.total {                    
+    font-size: 2rem;
+    padding-top: 2rem;
+}
